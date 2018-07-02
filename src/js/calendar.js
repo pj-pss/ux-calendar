@@ -15,9 +15,6 @@ $(function () {
 
 
   $('#calendar').fullCalendar({
-    // header: {
-    //   right: 'month,agendaDay,listDay'
-    // },
     header: false,
     locale: 'ja',
     defaultView: 'listYear',
@@ -31,7 +28,7 @@ $(function () {
     viewRender: function (view) {
       var title = view.title;
       $(".calendar-title").html(title);
-            // if (view.name == 'agendaDay') {
+      // if (view.name == 'agendaDay') {
       //   $('table').find('.fc-day-header').html('');
       // }
     },
@@ -138,10 +135,14 @@ $(function () {
 
   $('#prev').on('click', function () {
     $('#calendar').fullCalendar('prev'); // call method
+    ControlFooter($('#list'));
+    displayListYear();
   });
 
   $('#next').on('click', function () {
     $('#calendar').fullCalendar('next'); // call method
+    ControlFooter($('#list'));
+    displayListYear();
   });
 
   $('#today-btn').on('click', function () {

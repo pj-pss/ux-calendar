@@ -271,7 +271,7 @@ footer button.current {
 .event-info-li {
     display: flex;
     flex-direction: row;
-    margin-left: 1.5rem;
+    padding-left: 1.5rem;
 }
 
 .event-info-title {
@@ -292,7 +292,7 @@ footer button.current {
     border: 0;
 }
 
-#event-title input[type="text"],
+#event-add-box input[type="text"],
 .event-date-setting input[type="datetime-local"],
 .event-date-setting input[type="text"] {
     border: none;
@@ -300,12 +300,12 @@ footer button.current {
     /* height: 100%; */
 }
 
-#event-title input[type="text"],
+/* #event-title input[type="text"],
 .event-date-setting input[type="text"] {
     line-height: 28px;
-}
+} */
 
-#event-title input[type="text"] {
+#event-add-box input[type="text"] {
     padding-left: 1.5rem;
 }
 
