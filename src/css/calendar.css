@@ -196,7 +196,7 @@ footer {
 }
 
 footer button {
-    min-width: 70px;
+    min-width: 75px;
     background: none;
     border: none;
     color: #9c9c9c;
@@ -415,4 +415,19 @@ input:checked+label::after {
 .text-btn{
     color: #ffffff;
     font-size: 1.2rem;
+}
+
+.fc-unthemed td.fc-today{
+    background-color: #FEDED6;
+}
+
+
+.event-date-setting input[disabled], .event-date-setting input[disabled],
+.event-date-setting textarea[disabled]{
+    background-color: #ffffff;
+    
+}
+
+.disable{
+    pointer-events: none;
 }

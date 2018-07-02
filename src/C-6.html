@@ -42,10 +42,12 @@
 <body>
     <header>
         <button class="header-btn pn-btn pn-back-btn text-btn" onclick="javascript:location.href='C-2.html';">
-            キャンセル
+            <button class="header-btn pn-back-btn pn-btn" onclick="javascript:location.href='C-2.html';">
+                <i id="back_btn" class="fas fa-angle-left fa-2x header-ic-01"></i>
+            </button>
         </button>
-        <div>新しい予定</div>
-        <button class="header-btn-right header-btn pn-btn text-btn">保存</button>
+        <div>イベント詳細</div>
+        <button id="edit-btn" class="header-btn-right header-btn pn-btn text-btn">編集</button>
     </header>
 
     <main class="no-footer">
@@ -54,7 +56,7 @@
             <li class="event-info-li">
                 <div class="event-date-setting">
                     <div class="input-group">
-                        <input id="event-title" type="text" class="form-control" placeholder="タイトル" aria-label="タイトル" aria-describedby="basic-addon2">
+                        <input id="event-title" type="text" class="form-control" placeholder="蒲田にて" aria-label="蒲田にて" aria-describedby="basic-addon2" disabled>
                     </div>
                 </div>
             </li>
@@ -62,20 +64,20 @@
             <li class="event-info-li">
                 <div class="event-info-title">開始</div>
                 <div class="event-date-setting">
-                    <input type="datetime-local" class="event-date" name="event-start-date" value="2017-04-01T00:00">
+                    <input type="datetime-local" class="event-date" name="event-start-date" value="2018-06-08T10:30" disabled>
                 </div>
             </li>
             <li class="event-info-li">
                 <div class="event-info-title">終了</div>
                 <div class="event-date-setting">
-                    <input type="datetime-local" class="event-date" name="event-start-date" value="2017-04-01T00:00">
+                    <input type="datetime-local" class="event-date" name="event-start-date" value="2018-06-08T12:30" disabled>
                 </div>
             </li>
             <li class="event-info-li">
                 <div class="event-info-title">終日</div>
                 <div class="event-date-setting">
-                    <div class="event-toggle-btn">
-                        <input type="checkbox" id="demo01" checked />
+                    <div class="event-toggle-btn disable">
+                        <input type="checkbox" id="demo01" disabled/>
                         <label for="demo01" data-on-label="On" data-off-label="Off"></label>
                     </div>
                 </div>
@@ -96,14 +98,14 @@
             <li class="event-info-li">
                 <div class="event-date-setting">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="場所" aria-label="場所" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control" placeholder="場所" aria-label="場所" aria-describedby="basic-addon2" disabled>
                     </div>
                 </div>
             </li>
             <li class="event-info-li">
                 <div class="event-date-setting">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="URL" aria-label="URL" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control" placeholder="URL" aria-label="URL" aria-describedby="basic-addon2" disabled>
                     </div>
                 </div>
             </li>
@@ -111,7 +113,7 @@
                 <!-- <div class="event-info-title">メモ</div> -->
                 <div class="event-date-setting">
                     <div class="form-group">
-                        <textarea class="form-control" rows="3" placeholder="メモ"></textarea>
+                        <textarea class="form-control" rows="3" placeholder="メモ" disabled></textarea>
                     </div>
                 </div>
             </li>

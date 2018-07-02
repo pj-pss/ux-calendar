@@ -24,6 +24,23 @@ $(function () {
     timeFormat: 'HH:mm',
     slotLabelFormat: "H:mm",
     nowIndicator: true,
+    views: {
+      month: { // name of view
+        titleFormat: 'YYYY月M月',
+        fixedWeekCount: false,
+        eventLimitText: '',
+        dayPopoverFormat: 'YYYY年M月D日[(]ddd[)]',
+        // other view-specific options here
+      },
+      listYear: { // name of view
+        titleFormat: 'YYYY年'
+        // other view-specific options here
+      },
+      agendaDay: {
+        // titleFormat: 'M月D日[(]ddd[)]'
+        titleFormat: 'M月D日'
+      }
+    },
 
     viewRender: function (view) {
       var title = view.title;
@@ -32,7 +49,6 @@ $(function () {
       //   $('table').find('.fc-day-header').html('');
       // }
     },
-
     eventAfterAllRender: function (view) {
       if (view.name == 'listYear') {
         displayListYear();
@@ -42,6 +58,10 @@ $(function () {
       //   $('table').find('.fc-day-header').html('');
       // }
 
+    },
+
+    eventClick: function (calEvent, jsEvent, view) {
+      window.location.href = 'C-6.html';
     },
 
     navLinks: true, // can click day/week names to navigate views
@@ -135,14 +155,22 @@ $(function () {
 
   $('#prev').on('click', function () {
     $('#calendar').fullCalendar('prev'); // call method
-    ControlFooter($('#list'));
-    displayListYear();
+
+    var view = $('#calendar').fullCalendar('getView');
+    if (view.name == 'listYear') {
+      ControlFooter($('#list'));
+      displayListYear();
+    }
   });
 
   $('#next').on('click', function () {
     $('#calendar').fullCalendar('next'); // call method
-    ControlFooter($('#list'));
-    displayListYear();
+
+    var view = $('#calendar').fullCalendar('getView');
+    if (view.name == 'listYear') {
+      ControlFooter($('#list'));
+      displayListYear();
+    }
   });
 
   $('#today-btn').on('click', function () {
@@ -150,18 +178,36 @@ $(function () {
   });
 
   $('#month').on('click', function () {
+    $('#today-btn').html('今月');
     $('#calendar').fullCalendar('changeView', 'month'); // call method
     ControlFooter($(this));
   });
 
   $('#day').on('click', function () {
-    // var date = new Date();
+    $('#today-btn').html('今日');
     $('#calendar').fullCalendar('changeView', 'agendaDay'); // call method
     ControlFooter($(this));
   });
 
   $('#list').on('click', function () {
+    $('#today-btn').html('今年');
     displayListYear();
+  });
+
+  $('#edit-btn').on('click', function () {
+    $(this).html('保存');
+    var input_tag = $('main').find('input');
+    for(i=0; i<input_tag.length; i++){
+      input_tag[i].disabled = false;
+    }
+
+    var textarea_tag = $('main').find('textarea');
+    for(i=0; i<textarea_tag.length; i++){
+      textarea_tag[i].disabled = false;
+    }
+
+    $('.event-toggle-btn').removeClass('disable');
+    $('#event-title').focus();
   });
 
   //フッターのオレンジをはずす
