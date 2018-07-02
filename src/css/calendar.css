@@ -214,8 +214,10 @@ footer button.current {
 }
 
 footer button svg{
-    width: 100%!important;
-    text-align: center;
+    /* width: 100%!important;
+    text-align: center; */
+    margin: auto;
+    display: block!important;
 }
 
 .switching-menu {
