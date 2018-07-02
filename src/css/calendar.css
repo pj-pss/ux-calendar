@@ -180,7 +180,7 @@ footer {
 }
 
 footer button {
-    width: 60px;
+    width: 70px;
     background: none;
     border: none;
     color: #9c9c9c;
@@ -197,7 +197,7 @@ footer button.current {
 }
 
 #add {
-    width: 80px;
+    width: 90px;
 }
 
 .width-full-btn{
@@ -214,7 +214,7 @@ footer button.current {
     content: "";
 }
 .fc-list-item-time{
-    width: 55px;
+    width: 50px;
 }
 
 .app-version{
