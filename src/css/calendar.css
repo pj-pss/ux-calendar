@@ -180,7 +180,7 @@ footer {
 }
 
 footer button {
-    width: 70px;
+    width: 75px;
     background: none;
     border: none;
     color: #9c9c9c;
@@ -197,7 +197,7 @@ footer button.current {
 }
 
 #add {
-    width: 90px;
+    width: 100px;
 }
 
 .width-full-btn{
