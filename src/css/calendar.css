@@ -271,7 +271,7 @@ footer button.current {
 .event-info-li {
     display: flex;
     flex-direction: row;
-    padding-left: 1.5rem;
+    /* padding-left: 1.5rem; */
 }
 
 .event-info-title {
@@ -292,7 +292,6 @@ footer button.current {
     border: 0;
 }
 
-#event-add-box input[type="text"],
 .event-date-setting input[type="datetime-local"],
 .event-date-setting input[type="text"] {
     border: none;
@@ -305,9 +304,9 @@ footer button.current {
     line-height: 28px;
 } */
 
-#event-add-box input[type="text"] {
+/* #event-add-box input[type="text"] {
     padding-left: 1.5rem;
-}
+} */
 
 .event-date-setting input[type="datetime-local"] {
     text-align: right;
