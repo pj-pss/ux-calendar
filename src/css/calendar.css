@@ -199,6 +199,7 @@ footer button {
     background: none;
     border: none;
     color: #9c9c9c;
+    white-space: nowrap;
 }
 
 footer button.current {
