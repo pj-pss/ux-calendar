@@ -180,15 +180,16 @@ footer {
 }
 
 footer button {
-    /* width: 75px; */
+    width: 60px;
     background: none;
     border: none;
     color: #9c9c9c;
+    
 }
 
 footer button.current {
-    background: none;
-    border: none;
+    /* background: none;
+    border: none; */
     color: #e56700;
 }
 
