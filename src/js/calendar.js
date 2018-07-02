@@ -25,16 +25,14 @@ $(function () {
     slotLabelFormat: "H:mm",
     nowIndicator: true,
     views: {
-      month: { // name of view
+      month: {
         titleFormat: 'YYYY月M月',
         fixedWeekCount: false,
         eventLimitText: '',
         dayPopoverFormat: 'YYYY年M月D日[(]ddd[)]',
-        // other view-specific options here
       },
-      listYear: { // name of view
+      listYear: {
         titleFormat: 'YYYY年'
-        // other view-specific options here
       },
       agendaDay: {
         // titleFormat: 'M月D日[(]ddd[)]'
@@ -45,26 +43,23 @@ $(function () {
     viewRender: function (view) {
       var title = view.title;
       $(".calendar-title").html(title);
-      // if (view.name == 'agendaDay') {
-      //   $('table').find('.fc-day-header').html('');
-      // }
+
     },
+
     eventAfterAllRender: function (view) {
       if (view.name == 'listYear') {
         displayListYear();
       }
-
       // if (view.name == 'agendaDay') {
       //   $('table').find('.fc-day-header').html('');
       // }
-
     },
 
     eventClick: function (calEvent, jsEvent, view) {
       window.location.href = 'C-6.html';
     },
 
-    navLinks: true, // can click day/week names to navigate views
+    navLinks: true,
     selectable: true,
     selectHelper: true,
     select: function (start, end) {
@@ -76,12 +71,12 @@ $(function () {
           start: start,
           end: end
         };
-        $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+        $('#calendar').fullCalendar('renderEvent', eventData, true);
       }
       $('#calendar').fullCalendar('unselect');
     },
     editable: true,
-    eventLimit: true, // allow "more" link when too many events
+    eventLimit: true,
     height: 'parent',
     events: [{
         title: '蒲田にて',
@@ -95,12 +90,6 @@ $(function () {
         end: '2018-06-19',
         color: '#4CA1D0'
       },
-      // {
-      //   title: 'Long Event',
-      //   start: '2018-03-07',
-      //   end: '2018-03-10',
-      //   color: '#FF4F5E'
-      // },
       {
         title: '会議',
         start: '2018-06-16T10:00:00',
@@ -119,12 +108,6 @@ $(function () {
         end: '2018-06-16T13:00:00',
         color: '#FF4F5E'
       },
-      // {
-      //   title: 'Conference',
-      //   start: '2018-03-11',
-      //   end: '2018-03-13',
-      //   color: '#FF4F5E'
-      // },
       {
         title: 'Meeting',
         start: '2018-06-16T14:00:00',
@@ -154,7 +137,7 @@ $(function () {
 
 
   $('#prev').on('click', function () {
-    $('#calendar').fullCalendar('prev'); // call method
+    $('#calendar').fullCalendar('prev');
 
     var view = $('#calendar').fullCalendar('getView');
     if (view.name == 'listYear') {
@@ -164,7 +147,7 @@ $(function () {
   });
 
   $('#next').on('click', function () {
-    $('#calendar').fullCalendar('next'); // call method
+    $('#calendar').fullCalendar('next');
 
     var view = $('#calendar').fullCalendar('getView');
     if (view.name == 'listYear') {
@@ -174,18 +157,18 @@ $(function () {
   });
 
   $('#today-btn').on('click', function () {
-    $('#calendar').fullCalendar('today'); // call method
+    $('#calendar').fullCalendar('today');
   });
 
   $('#month').on('click', function () {
     $('#today-btn').html('今月');
-    $('#calendar').fullCalendar('changeView', 'month'); // call method
+    $('#calendar').fullCalendar('changeView', 'month');
     ControlFooter($(this));
   });
 
   $('#day').on('click', function () {
     $('#today-btn').html('今日');
-    $('#calendar').fullCalendar('changeView', 'agendaDay'); // call method
+    $('#calendar').fullCalendar('changeView', 'agendaDay');
     ControlFooter($(this));
   });
 
@@ -197,12 +180,12 @@ $(function () {
   $('#edit-btn').on('click', function () {
     $(this).html('保存');
     var input_tag = $('main').find('input');
-    for(i=0; i<input_tag.length; i++){
+    for (i = 0; i < input_tag.length; i++) {
       input_tag[i].disabled = false;
     }
 
     var textarea_tag = $('main').find('textarea');
-    for(i=0; i<textarea_tag.length; i++){
+    for (i = 0; i < textarea_tag.length; i++) {
       textarea_tag[i].disabled = false;
     }
 
@@ -210,7 +193,11 @@ $(function () {
     $('#event-title').focus();
   });
 
-  //フッターのオレンジをはずす
+
+  /**
+   * ControlFooter
+   * @param {*} target 
+   */
   function ControlFooter(target) {
     $('.switching-menu').find('.clicked').removeClass('clicked');
     var result = $('.switching-menu').find('.current');
@@ -218,6 +205,10 @@ $(function () {
     target.addClass('current');
   }
 
+  /**
+   * displayListYear
+   * Event List's Layout Custom method
+   */
   function displayListYear() {
     var list_btn = $('#list');
 
@@ -230,29 +221,28 @@ $(function () {
       // Add Month Header
       var fc_list_heading = $('.fc-list-table').find('.fc-list-heading');
 
-      var fc_list_date; //リストの日付
+      var fc_list_date; //List's date
       var dt;
       var Y_check;
       var M_check;
 
-      //配列の一番最初に対して実施
+      //Processing on the first element of the array
       fc_list_date = $(fc_list_heading[0]).data('date');
       dt = new Date(fc_list_date);
-      //チェック用
 
+      //For date check 
       Y_check = dt.getFullYear();
       M_check = dt.getMonth();
 
       $(fc_list_heading[0]).before('<tr class="list-month list-' + (M_check + 1) + 'month"><th class="list-month-title" colspan="3">' + Y_check + '年' + (M_check + 1) + '月' + '</th></tr>');
 
-
-      //配列の2番目以降から実施
+      //Processing on after second element of the array
       for (i = 1; i < fc_list_heading.length; i++) {
 
-        //日付のデータだけ取得
+        //get date data
         fc_list_date = $(fc_list_heading[i]).data('date');
 
-        //日付型に変換
+        //change date class
         dt = new Date(fc_list_date);
 
         if (dt.getFullYear() == Y_check && dt.getMonth() == M_check) {

@@ -203,19 +203,11 @@ footer button {
 
 }
 
-footer button .icon-text{
-    /* white-space: nowrap; */
-}
-
 footer button.current {
-    /* background: none;
-    border: none; */
     color: #e56700;
 }
 
 footer button svg{
-    /* width: 100%!important;
-    text-align: center; */
     margin: auto;
     display: block!important;
 }
@@ -274,12 +266,10 @@ footer button svg{
 .event-info-li {
     display: flex;
     flex-direction: row;
-    /* padding-left: 1.5rem; */
 }
 
 .event-info-title {
     width: 7.0rem;
-    /* line-height: 40px; */
     margin: auto 0px;
     padding: .375rem .75rem;
 }
@@ -292,7 +282,6 @@ footer button svg{
 
 .event-date {
     width: 100%;
-    /* line-height: 38px; */
     border: 0;
 }
 
@@ -300,18 +289,8 @@ footer button svg{
 .event-date-setting input[type="text"] {
     border: none;
     border-radius: 0;
-    /* height: 100%; */
     min-height: 45px;
 }
-
-/* #event-title input[type="text"],
-.event-date-setting input[type="text"] {
-    line-height: 28px;
-} */
-
-/* #event-add-box input[type="text"] {
-    padding-left: 1.5rem;
-} */
 
 .event-date-setting input[type="datetime-local"] {
     text-align: right;
@@ -357,13 +336,6 @@ input+label::after {
     background-color: #fff;
     border-radius: 50%;
 }
-
-/* input:checked+label::before {
-	content: attr(data-on-label);
-	left: 7px;
-	right: auto;
-	color: #fff;
-} */
 
 input:checked+label::after {
     left: 20px;
