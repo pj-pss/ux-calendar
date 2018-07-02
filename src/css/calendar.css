@@ -196,7 +196,7 @@ footer {
 }
 
 footer button {
-    width: 60px;
+    min-width: 60px;
     background: none;
     border: none;
     color: #9c9c9c;
@@ -204,7 +204,7 @@ footer button {
 }
 
 footer button .icon-text{
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 footer button.current {
