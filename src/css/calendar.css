@@ -209,7 +209,7 @@ footer button.current {
 }
 
 footer button svg{
-    width: 100%;
+    width: 100%!important;
 }
 
 .switching-menu {
@@ -235,7 +235,7 @@ footer button svg{
 }
 
 .fc-list-item-time {
-    width: 50px;
+    width: 45px;
 }
 
 .app-version {
