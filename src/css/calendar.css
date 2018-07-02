@@ -184,7 +184,7 @@ footer button {
     background: none;
     border: none;
     color: #9c9c9c;
-    
+
 }
 
 footer button.current {
@@ -236,7 +236,7 @@ footer button.current {
 }
 
 .add-event li{
-    min-height: 40px;
+    min-height: 50px;
 }
 
 .separate-li{
@@ -270,6 +270,7 @@ footer button.current {
 .event-date-setting input[type="text"]{
     border: none;
     border-radius: 0;
+    height: 100%;
 }
 
 #event-title input[type="text"],
