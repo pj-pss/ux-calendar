@@ -213,10 +213,10 @@ footer button.current {
     color: #e56700;
 }
 
-/* footer button svg{
+footer button svg{
     width: 100%!important;
     text-align: center;
-} */
+}
 
 .switching-menu {
     display: flex;
