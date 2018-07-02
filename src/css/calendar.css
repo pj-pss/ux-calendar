@@ -1,5 +1,5 @@
-
 /*Calendar App Common Parts*/
+
 header {
     line-height: 4.0rem;
     background-color: #FD8F74;
@@ -47,16 +47,18 @@ main {
 }
 
 .header-ic-03 {
-    width: 2.0rem!important;
+    width: 2.0rem !important;
 }
 
 /*Calendar.html*/
+
 #calendar {
     margin: 0 auto;
     background-color: #ffffff;
 }
 
 /*Calendar Event Default Color*/
+
 .fc-event,
 .fc-event-dot {
     background-color: #707070;
@@ -69,6 +71,7 @@ main {
 }
 
 /*Calendar Month(Overflowed event)*/
+
 a.fc-more {
     display: flex;
     white-space: nowrap;
@@ -76,16 +79,19 @@ a.fc-more {
 }
 
 /*Calendar Saturday Color*/
+
 .fc-sat {
     color: #1560D9;
 }
 
 /*Calendar Sunday Color*/
+
 .fc-sun {
     color: #E35151;
 }
 
 /*Agenda Day's Event Box*/
+
 .fc-time-grid .fc-event {
     background: #fff !important;
     color: inherit !important;
@@ -94,23 +100,26 @@ a.fc-more {
 }
 
 /*Agenda Day's Event Box*/
+
 .fc-event {
     border-radius: 0;
 }
 
 /*Agenda Day's Schedule Background*/
+
 .fc-time-grid,
 .fc-time-grid-container {
     background-color: #F7F7F7;
 }
 
 /*Agenda Day's Time Area Border*/
-.fc-time{
-    border: none!important;
+
+.fc-time {
+    border: none !important;
 }
 
-
 /*List Year's Time Area & Event Area*/
+
 .fc-list-item-time {
     word-wrap: break-word;
     white-space: initial;
@@ -118,12 +127,14 @@ a.fc-more {
 }
 
 /*List Year's Time Area*/
-.fc-list-table td.fc-list-item-time{
+
+.fc-list-table td.fc-list-item-time {
     text-align: center;
     padding: 8px 4px;
 }
 
 /*List Year's Month Header*/
+
 .list-month {
     background-size: cover;
     background-repeat: no-repeat;
@@ -131,26 +142,30 @@ a.fc-more {
 }
 
 /*List Year's Month Header Title*/
+
 .list-month-title {
     height: 100px;
     text-align: left !important;
     font-size: 1.2rem;
     color: #ffffff;
-    padding: 0.5rem!important;
-    border-width: 0px!important;
+    padding: 0.5rem !important;
+    border-width: 0px !important;
 }
 
 /*List Year's Month Header (June)*/
-.list-6month{
+
+.list-6month {
     background-image: url('../img/test_001.png');
 }
 
 /*List Year's Month Header (July)*/
-.list-7month{
+
+.list-7month {
     background-image: url('../img/test_002.png');
 }
 
 /*List Year's Event Area(Left Border Position)*/
+
 .fc-ltr .fc-list-item-marker {
     padding-top: 0;
     padding-bottom: 0;
@@ -159,13 +174,13 @@ a.fc-more {
 }
 
 /*List Year's Event Area(Left Border Form)*/
-.fc-event-dot{
+
+.fc-event-dot {
     height: 100%;
     border-radius: 0;
     position: absolute;
     width: 7px;
 }
-
 
 footer {
     height: 5.0rem;
@@ -184,7 +199,6 @@ footer button {
     background: none;
     border: none;
     color: #9c9c9c;
-
 }
 
 footer button.current {
@@ -201,100 +215,105 @@ footer button.current {
     width: 100px;
 }
 
-.width-full-btn{
+.width-full-btn {
     width: 100%;
     color: #2979FF;
     font-size: 1.5rem;
 }
 
-.calendar-list{
-    padding-left: 20px;    
+.calendar-list {
+    padding-left: 20px;
 }
 
-.calendar-list::after{
+.calendar-list::after {
     content: "";
 }
-.fc-list-item-time{
+
+.fc-list-item-time {
     width: 50px;
 }
 
-.app-version{
+.app-version {
     background-color: #F7F7F7;
 }
 
-#drawer_menu>ul>li.app-version>a{
+#drawer_menu>ul>li.app-version>a {
     color: #BBBBBB;
 }
 
-.fc-list-item{
+.fc-list-item {
     height: 90px;
 }
 
 .fc-list-item .fc-list-item-time,
-.fc-list-item .fc-list-item-title{
+.fc-list-item .fc-list-item-title {
     vertical-align: middle;
 }
 
-.add-event li{
-    min-height: 50px;
+.add-event li {
+    min-height: 45px;
 }
 
-.separate-li{
+.separate-li {
     background-color: #E5E6EB;
 }
 
-.event-info-li{
+.event-info-li {
     display: flex;
     flex-direction: row;
     margin-left: 1.5rem;
 }
 
-.event-info-title{
+.event-info-title {
     width: 7.0rem;
-    line-height: 40px;
-}
-.event-date-setting{
-    flex: 1;
-    text-align: right;
+    /* line-height: 40px; */
+    margin: auto 0px;
 }
 
-.event-date{
+.event-date-setting {
+    flex: 1;
+    text-align: right;
+    margin: auto 0px;
+}
+
+.event-date {
     width: 100%;
-    line-height: 38px;
+    /* line-height: 38px; */
     border: 0;
 }
 
-
 #event-title input[type="text"],
 .event-date-setting input[type="datetime-local"],
-.event-date-setting input[type="text"]{
+.event-date-setting input[type="text"] {
     border: none;
     border-radius: 0;
     /* height: 100%; */
 }
 
 #event-title input[type="text"],
-.event-date-setting input[type="text"]{
+.event-date-setting input[type="text"] {
     line-height: 28px;
 }
 
-#event-title input[type="text"]{
+#event-title input[type="text"] {
     padding-left: 1.5rem;
 }
 
-.event-date-setting input[type="datetime-local"]{
+.event-date-setting input[type="datetime-local"] {
     text-align: right;
 }
 
 input[type="checkbox"] {
-	display: none;
+    display: none;
 }
+
 input+label,
 input+label::before,
 input+label::after {
-	-webkit-transition: all .2s;
-	transition: all .2s;
+    -webkit-transition: all .2s;
+    transition: all .2s;
 }
+
 input+label {
     display: inline-block;
     position: relative;
@@ -302,7 +321,10 @@ input+label {
     height: 30px;
     border-radius: 24px;
     cursor: pointer;
+    margin: 0px 10px;
+    vertical-align: middle;
 }
+
 input+label::before {
     display: block;
     content: "";
@@ -310,6 +332,7 @@ input+label::before {
     top: 3px;
     right: 7px;
 }
+
 input+label::after {
     content: '';
     position: absolute;
@@ -320,49 +343,57 @@ input+label::after {
     background-color: #fff;
     border-radius: 50%;
 }
+
 /* input:checked+label::before {
 	content: attr(data-on-label);
 	left: 7px;
 	right: auto;
 	color: #fff;
 } */
+
 input:checked+label::after {
     left: 20px;
     background-color: #f7f7f7;
 }
 
-
-
 #demo01+label {
-	background-color: #eee;
-}
-#demo01+label::before {
-	color: #aaa;
-}
-#demo01:checked+label {
-	background-color: #3498db;
-}
-#demo01:checked+label::before {
-	color: #fff;
+    background-color: #eee;
 }
 
-.event-toggle-btn{
+#demo01+label::before {
+    color: #aaa;
+}
+
+#demo01:checked+label {
+    background-color: #3498db;
+}
+
+#demo01:checked+label::before {
+    color: #fff;
+}
+
+.event-toggle-btn {
     text-align: right;
 }
 
-.event-date-setting .form-group{
+.event-date-setting .form-group {
     margin: 0;
 }
 
-.event-date-setting .form-group textarea{
+.event-date-setting .form-group textarea {
     border: 0;
     border-radius: 0;
 }
 
-.event-data-setting-next::after{
-    content: '＞'
+.event-data-setting-next::after {
+    content: '＞';
+    margin: 0px 10px;
 }
 
 .add-event li:last-child {
     border-bottom: 0;
-  }
+}
+
+.no-footer{
+    padding-bottom: 0px;
+}
