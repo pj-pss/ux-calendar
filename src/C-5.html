@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.css"
+        media="print">
+    <link rel="stylesheet" href="./css/personium.css">
+    <link rel="stylesheet" href="./css/calendar.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+    <script>
+        FontAwesomeConfig = {
+            searchPseudoElements: true
+        };
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="./js/personium.js"></script>
+    <script src="./js/calendar.js"></script>
+
+    <title>Personium</title>
+</head>
+
+<body>
+    <header>
+        <button class="header-btn pn-btn pn-back-btn text-btn" onclick="javascript:location.href='C-2.html';">
+            キャンセル
+        </button>
+        <div>新しい予定</div>
+        <button class="header-btn-right header-btn pn-btn text-btn">保存</button>
+    </header>
+
+    <main class="no-footer">
+        <ul class="add-event">
+            <li class="separate-li"></li>
+            <li class="event-info-li">
+                <div class="event-date-setting">
+                    <div class="input-group">
+                        <input id="event-title" type="text" class="form-control" placeholder="タイトル" aria-label="タイトル" aria-describedby="basic-addon2">
+                    </div>
+                </div>
+            </li>
+            <li class="separate-li"></li>
+            <li class="event-info-li">
+                <div class="event-info-title">開始</div>
+                <div class="event-date-setting">
+                    <input type="datetime-local" class="event-date" name="event-start-date" value="2017-04-01T00:00">
+                </div>
+            </li>
+            <li class="event-info-li">
+                <div class="event-info-title">終了</div>
+                <div class="event-date-setting">
+                    <input type="datetime-local" class="event-date" name="event-start-date" value="2017-04-01T00:00">
+                </div>
+            </li>
+            <li class="event-info-li">
+                <div class="event-info-title">終日</div>
+                <div class="event-date-setting">
+                    <div class="event-toggle-btn">
+                        <input type="checkbox" id="demo01" checked />
+                        <label for="demo01" data-on-label="On" data-off-label="Off"></label>
+                    </div>
+                </div>
+            </li>
+            <li class="separate-li"></li>
+            <li class="event-info-li">
+                <div class="event-info-title">繰り返し</div>
+                <div class="event-date-setting event-data-setting-next">なし</div>
+            </li>
+            <li class="event-info-li">
+                <div class="event-info-title">通知</div>
+                <div class="event-date-setting event-data-setting-next">なし</div>
+            </li>
+            <li class="event-info-li">
+                <div class="event-info-title">カレンダー</div>
+                <div class="event-date-setting event-data-setting-next">hogehoge@gmail.com</div>
+            </li>
+            <li class="event-info-li">
+                <div class="event-date-setting">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="場所" aria-label="場所" aria-describedby="basic-addon2">
+                    </div>
+                </div>
+            </li>
+            <li class="event-info-li">
+                <div class="event-date-setting">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="URL" aria-label="URL" aria-describedby="basic-addon2">
+                    </div>
+                </div>
+            </li>
+            <li class="event-info-li">
+                <!-- <div class="event-info-title">メモ</div> -->
+                <div class="event-date-setting">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" placeholder="メモ"></textarea>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+</body>
+
+</html>
