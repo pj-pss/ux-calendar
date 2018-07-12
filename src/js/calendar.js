@@ -32,7 +32,8 @@ $(function () {
         dayPopoverFormat: 'YYYY年M月D日[(]ddd[)]',
       },
       listYear: {
-        titleFormat: 'YYYY年'
+        titleFormat: 'YYYY年',
+        listDayFormat: 'D ddd'
       },
       agendaDay: {
         // titleFormat: 'M月D日[(]ddd[)]'
@@ -161,19 +162,19 @@ $(function () {
   });
 
   $('#month').on('click', function () {
-    $('#today-btn').html('今月');
+    // $('#today-btn').html('今月');
     $('#calendar').fullCalendar('changeView', 'month');
     ControlFooter($(this));
   });
 
   $('#day').on('click', function () {
-    $('#today-btn').html('今日');
+    // $('#today-btn').html('今日');
     $('#calendar').fullCalendar('changeView', 'agendaDay');
     ControlFooter($(this));
   });
 
   $('#list').on('click', function () {
-    $('#today-btn').html('今年');
+    // $('#today-btn').html('今年');
     displayListYear();
   });
 
